@@ -5,11 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Планирование</title>
   <style>
-    body { font-family: Arial; padding: 20px; }
-    nav a { margin-right: 15px; }
-    ul { list-style: none; padding: 0; }
-    li { background: #eee; margin: 5px 0; padding: 10px; border-radius: 5px; }
-    input[type='checkbox'] { margin-right: 10px; }
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background-image: url('page-background.jpg');
+      background-size: cover;
+    }
+    nav a {
+      margin-right: 15px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #fff9f2;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
@@ -30,9 +44,9 @@
     saved.forEach(([text]) => addTaskToList(text));
     function addTask() {
       const taskText = document.getElementById("taskInput").value.trim();
-      const deadline = document.getElementById("deadlineInput").value;
+      const deadlineValue = document.getElementById("deadlineInput").value;
       if (!taskText) return;
-      const fullText = taskText + (deadline ? ` (Дедлайн: ${deadline})` : '');
+      const fullText = taskText + (deadlineValue ? ` (Дедлайн: ${deadlineValue})` : '');
       addTaskToList(fullText);
       const data = [...taskList.querySelectorAll('li')].map(li => [li.textContent]);
       localStorage.setItem("tasks", JSON.stringify(data));
