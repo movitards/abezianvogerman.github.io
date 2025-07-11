@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VIP — Персидская мечта</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Персидская мечта</div>
+    <nav>
+      <a href="hotel.html#about">О нас</a>
+      <a href="hotel.html#rooms">Номера</a>
+      <a href="services.html">Услуги</a>
+      <a href="hotel.html#reviews">Отзывы</a>
+      <a href="hotel.html#contacts">Контакты</a>
+    </nav>
+  </header>
+  <main>
+    <section class="room-single">
+      <h1>Номер "VIP"</h1>
+      <img src="228697644.jpg" alt="VIP-номер" class="room-photo-large">
+      <div class="room-description">
+        <p>
+          <b>Цена:</b> от 12 000 ₽/сутки<br>
+          <b>Удобства:</b> Эксклюзивный дизайн, панорамные окна, джакузи, индивидуальный сервис, бар, вид на море, премиальная мебель, собственная зона отдыха.<br>
+          <b>Для особых гостей, максимальный комфорт и приватность.</b>
+        </p>
+        <button class="btn" id="openModal">Забронировать</button>
+        <a class="btn light" href="hotel.html#rooms">← К списку номеров</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Отель «Персидская мечта», Махачкала
+  </footer>
+
+  <!-- Модальное окно бронирования -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Забронировать номер "VIP"</h2>
+      <form class="booking-form" autocomplete="on">
+        <input type="text" name="fullname" placeholder="Имя и фамилия" required>
+        <input type="tel" name="phone" placeholder="Телефон" required>
+        <label>Дата заезда: <input type="date" name="checkin" required></label>
+        <label>Дата выезда: <input type="date" name="checkout" required></label>
+        <input type="time" name="time" placeholder="Время заселения" required>
+        <button type="submit" class="btn">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    function openModal() {
+      document.getElementById('modal').style.display = 'block';
+    }
+    document.getElementById('openModal').onclick = openModal;
+    document.getElementById('closeModal').onclick = function(){
+      document.getElementById('modal').style.display = 'none';
+    };
+    window.onclick = function(event) {
+      if(event.target == document.getElementById('modal')) {
+        document.getElementById('modal').style.display = "none";
+      }
+    };
+    document.querySelector('.booking-form').onsubmit = function(e) {
+      e.preventDefault();
+      alert("Спасибо! Ваша заявка отправлена.");
+      document.getElementById('modal').style.display = 'none';
+      this.reset();
+    };
+  </script>
+</body>
+</html>
