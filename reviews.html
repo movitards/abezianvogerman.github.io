@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Отзывы — Персидская мечта</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Персидская мечта</div>
+    <nav>
+      <a href="about.html">О нас</a>
+      <a href="hotel.html#rooms">Номера</a>
+      <a href="services.html">Услуги</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h1>Отзывы гостей</h1>
+      <div class="review">
+        <p>«Лучший отель на Каспии! Прекрасный персонал и потрясающий вид из номера.»<br><span>- Саид, Москва</span></p>
+      </div>
+      <div class="review">
+        <p>«Очень уютно, чисто, сервис на высоте. Вернусь снова!»<br><span>- Зарема, Махачкала</span></p>
+      </div>
+      <div class="review">
+        <p>«Всё понравилось, отличные номера и вкусный завтрак. Рекомендую!»<br><span>- Магомед, Питер</span></p>
+      </div>
+      <div class="review">
+        <p>«Красивая территория, рядом море, номер уютный. Спасибо персоналу!»<br><span>- Амина, Дербент</span></p>
+      </div>
+      <div class="review">
+        <p>«Отличный отель для семейного отдыха. Дети довольны!»<br><span>- Рамазан, Каспийск</span></p>
+      </div>
+      <h2>Оставьте ваш отзыв</h2>
+      <form class="booking-form" onsubmit="event.preventDefault(); alert('Спасибо за ваш отзыв!'); this.reset();">
+        <input type="text" name="fullname" placeholder="Ваше имя" required>
+        <textarea name="review" placeholder="Ваш отзыв" required style="min-height:60px"></textarea>
+        <button type="submit" class="btn">Отправить</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Отель «Персидская мечта», Махачкала
+  </footer>
+</body>
+</html>
