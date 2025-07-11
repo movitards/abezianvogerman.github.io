@@ -1,16 +1,225 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Добро пожаловать</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персидская Мечта — Отель в Махачкале</title>
+    <style>
+        :root {
+            --main-color: #1a1a36;
+            --accent: #e2b57a;
+            --text: #232323;
+            --light-bg: #fff8f0;
+            --transition: .3s;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--light-bg);
+            color: var(--text);
+        }
+        #welcome {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #e2b57a 30%, #fff8f0 100%);
+        }
+        #welcome h1 {
+            font-size: 2.5rem;
+            color: var(--main-color);
+            margin-bottom: 0.7em;
+        }
+        #welcome p {
+            font-size: 1.25rem;
+            margin-bottom: 1.5em;
+        }
+        #enter-btn {
+            background: var(--main-color);
+            color: #fff;
+            font-size: 1.2rem;
+            border: none;
+            padding: 0.9em 2.2em;
+            border-radius: 2em;
+            cursor: pointer;
+            transition: background var(--transition), box-shadow var(--transition);
+            box-shadow: 0 2px 8px #0002;
+        }
+        #enter-btn:hover {
+            background: var(--accent);
+            color: var(--main-color);
+        }
+        #main-site {
+            display: none;
+            min-height: 100vh;
+            background: #fff;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--main-color);
+            padding: 1em 3vw;
+            color: #fff;
+            box-shadow: 0 2px 6px #0001;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .logo {
+            font-size: 1.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.1em;
+            font-weight: 500;
+            transition: color var(--transition);
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        .main-banner {
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
+            min-height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 2em 6vw;
+            color: #fff;
+            position: relative;
+        }
+        .main-banner .info {
+            background: #0007;
+            padding: 1.6em 2.2em;
+            border-radius: 1em;
+            max-width: 480px;
+        }
+        .main-banner h2 {
+            font-size: 2.1rem;
+            margin-bottom: .7em;
+            color: var(--accent);
+        }
+        .main-banner p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .section {
+            max-width: 1024px;
+            margin: 2em auto;
+            padding: 1.2em 2vw;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1em;
+        }
+        .gallery img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 0.8em;
+            box-shadow: 0 1px 7px #0002;
+        }
+        .reviews {
+            background: var(--light-bg);
+            border-radius: 1em;
+            padding: 1.3em;
+            margin-top: 1.5em;
+            box-shadow: 0 2px 12px #0001;
+        }
+        .review {
+            border-left: 4px solid var(--accent);
+            margin-bottom: 1.2em;
+            padding-left: 1em;
+        }
+        .review:last-child { margin-bottom: 0; }
+        .review strong { color: var(--main-color);}
+        @media (max-width: 600px) {
+            #welcome h1 { font-size: 1.6rem;}
+            header, .main-banner .info { padding: 1em; }
+            .main-banner { min-height: 200px; padding: 1em;}
+            .main-banner h2 { font-size: 1.3rem; }
+            .section { padding: 1em 2vw; }
+        }
+    </style>
 </head>
-<body class="welcome">
-  <div class="welcome-box">
-    <h1>Привет, я Герман Абезьянов</h1>
-    <p>Из группы 4116 и хочу вам представить свой сайт на тему планирования дел.</p>
-    <a href="tasks.html" class="btn">Перейти на сайт</a>
-  </div>
+<body>
+    <div id="welcome">
+        <h1>Привет! Я Герман из группы 4116</h1>
+        <p>Хочу представить вам мой сайт — <b>отель "Персидская мечта" в Махачкале</b>!<br>
+        Добро пожаловать!</p>
+        <button id="enter-btn">Перейти на сайт</button>
+    </div>
+    <div id="main-site">
+        <header>
+            <div class="logo">Персидская Мечта</div>
+            <nav>
+                <a href="#main">Главная</a>
+                <a href="#rooms">Номера</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+        </header>
+        <div class="main-banner" id="main">
+            <div class="info">
+                <h2>Отель "Персидская мечта" в Махачкале</h2>
+                <p>Добро пожаловать в современный и уютный отель на побережье Каспийского моря!  
+                <br>Адрес: г. Махачкала, ул. Приморская, 20 (первая линия).
+                <br>Роскошные номера, изысканные виды, тёплый приём.
+                </p>
+            </div>
+        </div>
+        <section class="section">
+            <h2 id="rooms">Наши номера</h2>
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=500&q=80" alt="Обычный номер">
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=500&q=80" alt="VIP номер">
+                <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=500&q=80" alt="Сьют">
+                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=500&q=80" alt="Вид на море">
+            </div>
+        </section>
+        <section class="section reviews" id="reviews">
+            <h2>Отзывы гостей</h2>
+            <div class="review">
+                <strong>Аминат:</strong> Очень уютно, шикарный вид на море! Персонал заботливый, еда вкусная.
+            </div>
+            <div class="review">
+                <strong>Руслан:</strong> Отличное место для отдыха с семьёй. До пляжа 2 минуты пешком!
+            </div>
+            <div class="review">
+                <strong>Эльмира:</strong> VIP-номер превзошёл все ожидания. Спасибо за сервис!
+            </div>
+        </section>
+        <section class="section" id="contact">
+            <h2>Контакты</h2>
+            <p><b>Адрес:</b> г. Махачкала, ул. Приморская, 20<br>
+            <b>Телефон:</b> +7 (8722) 777-777<br>
+            <b>Email:</b> info@persian-dream.ru</p>
+            <p>Мы ждём вас ежедневно!<br>
+            Для бронирования номеров позвоните или напишите нам.</p>
+        </section>
+        <footer class="section" style="text-align:center;color:#888; font-size:.95em;">
+            © 2025 Персидская Мечта. Все права защищены.
+        </footer>
+    </div>
+    <script>
+        document.getElementById('enter-btn').onclick = function() {
+            document.getElementById('welcome').style.display = 'none';
+            document.getElementById('main-site').style.display = 'block';
+            window.scrollTo(0,0);
+        }
+        document.querySelectorAll('nav a').forEach(a => {
+            a.onclick = function(e) {
+                e.preventDefault();
+                let id = this.getAttribute('href').substring(1);
+                let el = document.getElementById(id);
+                if (el) el.scrollIntoView({behavior:'smooth'});
+            }
+        });
+    </script>
 </body>
 </html>
