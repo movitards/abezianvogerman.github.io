@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контакты — Персидская мечта</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Персидская мечта</div>
+    <nav>
+      <a href="about.html">О нас</a>
+      <a href="hotel.html#rooms">Номера</a>
+      <a href="services.html">Услуги</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h1>Контакты</h1>
+      <div class="contacts-block">
+        <p><b>Адрес:</b> г. Махачкала, ул. Приморская, 1 (первая линия у моря)</p>
+        <p><b>Телефон:</b> <a href="tel:+78722234567">+7 (8722) 23-45-67</a></p>
+        <p><b>Email:</b> <a href="mailto:persian.dream@mail.ru">persian.dream@mail.ru</a></p>
+      </div>
+      <div class="map-placeholder">
+        <p>Здесь будет ваша карта (например, Яндекс.Карты или Google Maps)</p>
+      </div>
+      <h2>Связаться с нами</h2>
+      <form class="booking-form" onsubmit="event.preventDefault(); alert('Ваше сообщение отправлено!'); this.reset();">
+        <input type="text" name="fullname" placeholder="Имя и фамилия" required>
+        <input type="email" name="email" placeholder="Ваш Email" required>
+        <textarea name="message" placeholder="Сообщение" required style="min-height:60px"></textarea>
+        <button type="submit" class="btn">Отправить</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Отель «Персидская мечта», Махачкала
+  </footer>
+</body>
+</html>
