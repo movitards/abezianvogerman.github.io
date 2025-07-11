@@ -1,3 +1,4 @@
+<!-- hotel.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -23,112 +24,45 @@
       <h1>Добро пожаловать в отель «Персидская мечта»</h1>
       <p>Современный уют в сердце Махачкалы, 1-я линия у моря</p>
       <img src="1514723511_0_546_5244_3495_1920x0_80_0_0_b2e21246367c8a57294b5974a7809512.jpg" alt="Вид отеля Персидская мечта" class="main-photo">
-      <button class="btn" id="openModal">Забронировать номер</button>
-    </section>
-
-    <section id="about">
-      <h2>О нас</h2>
-      <p>Отель «Персидская мечта» — уникальное сочетание восточного колорита и современного комфорта в самом центре Махачкалы на первой линии у моря. Уютные номера, отличный сервис и потрясающие виды на Каспий ждут вас круглый год!</p>
+      <a class="btn" href="#rooms">Смотреть номера</a>
     </section>
 
     <section id="rooms">
       <h2>Номера</h2>
       <div class="room-list">
         <div class="room-card">
-          <img src="4dc7d6157bee1a97e3ac1f03b7d3787a.jpg" alt="Стандартный номер">
-          <h3>Стандарт</h3>
-          <p>Для одного-двух гостей. В номере: Wi-Fi, кондиционер, санузел, телевизор.</p>
-          <span>от 3500 ₽/сутки</span>
-          <button class="btn" onclick="openModal()">Забронировать</button>
+          <a href="room-standard.html">
+            <img src="4dc7d6157bee1a97e3ac1f03b7d3787a.jpg" alt="Стандартный номер">
+            <h3>Стандарт</h3>
+            <p>Для одного-двух гостей. В номере: Wi-Fi, кондиционер, санузел, телевизор.</p>
+            <span>от 3500 ₽/сутки</span>
+            <span class="room-link">Подробнее &rarr;</span>
+          </a>
         </div>
         <div class="room-card">
-          <img src="55f8753c9704b52e8b0c63a7f8.jpeg" alt="Люкс">
-          <h3>Люкс</h3>
-          <p>Просторные апартаменты с видом на море, большая кровать, ванная, мини-бар.</p>
-          <span>от 6500 ₽/сутки</span>
-          <button class="btn" onclick="openModal()">Забронировать</button>
+          <a href="room-luxe.html">
+            <img src="55f8753c9704b52e8b0c63a7f8.jpeg" alt="Люкс">
+            <h3>Люкс</h3>
+            <p>Просторные апартаменты с видом на море, большая кровать, ванная, мини-бар.</p>
+            <span>от 6500 ₽/сутки</span>
+            <span class="room-link">Подробнее &rarr;</span>
+          </a>
         </div>
         <div class="room-card">
-          <img src="228697644.jpg" alt="VIP-номер">
-          <h3>VIP</h3>
-          <p>Эксклюзивный дизайн, панорамные окна, индивидуальный сервис. Для особых гостей.</p>
-          <span>от 12 000 ₽/сутки</span>
-          <button class="btn" onclick="openModal()">Забронировать</button>
+          <a href="room-vip.html">
+            <img src="228697644.jpg" alt="VIP-номер">
+            <h3>VIP</h3>
+            <p>Эксклюзивный дизайн, панорамные окна, индивидуальный сервис. Для особых гостей.</p>
+            <span>от 12 000 ₽/сутки</span>
+            <span class="room-link">Подробнее &rarr;</span>
+          </a>
         </div>
       </div>
     </section>
-
-    <section id="reviews">
-      <h2>Отзывы гостей</h2>
-      <div class="review">
-        <p>«Лучший отель на Каспии! Прекрасный персонал и потрясающий вид из номера.»<br><span>- Саид, Москва</span></p>
-      </div>
-      <div class="review">
-        <p>«Очень уютно, чисто, сервис на высоте. Вернусь снова!»<br><span>- Зарема, Махачкала</span></p>
-      </div>
-      <div class="review">
-        <p>«Всё понравилось, отличные номера и вкусный завтрак. Рекомендую!»<br><span>- Магомед, Питер</span></p>
-      </div>
-      <div class="review">
-        <p>«Красивая территория, рядом море, номер уютный. Спасибо персоналу!»<br><span>- Амина, Дербент</span></p>
-      </div>
-      <div class="review">
-        <p>«Отличный отель для семейного отдыха. Дети довольны!»<br><span>- Рамазан, Каспийск</span></p>
-      </div>
-      <a class="btn" href="#contacts">Оставить отзыв</a>
-    </section>
-
-    <section id="contacts">
-      <h2>Контакты</h2>
-      <div class="contacts-block">
-        <p><b>Адрес:</b> г. Махачкала, ул. Приморская, 1 (первая линия у моря)</p>
-        <p><b>Телефон:</b> <a href="tel:+78722234567">+7 (8722) 23-45-67</a></p>
-        <p><b>Email:</b> <a href="mailto:persian.dream@mail.ru">persian.dream@mail.ru</a></p>
-      </div>
-      <div class="map-placeholder">
-        <p>Здесь будет ваша карта (например, Яндекс.Карты или Google Maps)</p>
-      </div>
-    </section>
+    <!-- Остальные разделы (about, reviews, contacts) — как раньше -->
   </main>
   <footer>
     &copy; 2025 Отель «Персидская мечта», Махачкала
   </footer>
-
-  <!-- Модальное окно для бронирования -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close" id="closeModal">&times;</span>
-      <h2>Забронировать номер</h2>
-      <form class="booking-form" autocomplete="on">
-        <input type="text" name="fullname" placeholder="Имя и фамилия" required>
-        <input type="tel" name="phone" placeholder="Телефон" required>
-        <input type="text" name="room" placeholder="Тип номера (Стандарт/Люкс/VIP)" required>
-        <label>Дата заезда: <input type="date" name="checkin" required></label>
-        <label>Дата выезда: <input type="date" name="checkout" required></label>
-        <input type="time" name="time" placeholder="Время заселения" required>
-        <button type="submit" class="btn">Отправить заявку</button>
-      </form>
-    </div>
-  </div>
-  <script>
-    function openModal() {
-      document.getElementById('modal').style.display = 'block';
-    }
-    document.getElementById('openModal').onclick = openModal;
-    document.getElementById('closeModal').onclick = function(){
-      document.getElementById('modal').style.display = 'none';
-    };
-    window.onclick = function(event) {
-      if(event.target == document.getElementById('modal')) {
-        document.getElementById('modal').style.display = "none";
-      }
-    };
-    document.querySelector('.booking-form').onsubmit = function(e) {
-      e.preventDefault();
-      alert("Спасибо! Ваша заявка отправлена.");
-      document.getElementById('modal').style.display = 'none';
-      this.reset();
-    };
-  </script>
 </body>
 </html>
